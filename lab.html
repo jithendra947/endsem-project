@@ -1,0 +1,29 @@
+<html>
+<body>
+<h2>Signup</h2>
+
+<input type="name" placeholder="Name">
+<br>
+<input type="email" placeholder="Email">
+<br>
+<input type="pass" placeholder="Password">
+<br>
+
+<button onclick="signup()">Signup</button>
+<p id="msg"></p>
+
+<script>
+function signup() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let pass = document.getElementById("pass").value;
+
+      let user = {name, email, pass};
+    localStorage.setItem("user", JSON.stringify(user));
+
+    document.getElementById("msg").innerHTML = "Signup Successful";
+    console.log("signup succesful");
+}
+</script>
+</body>
+</html>
